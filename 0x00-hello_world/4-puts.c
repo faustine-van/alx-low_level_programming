@@ -1,8 +1,12 @@
 #include <stdio.h>
-
+/*
+ *main - print a line  using puts
+ *
+ *return 0
+*/
 int main(void)
 {
-	/*intialize*/
-	puts("\"Programming is like building a multilingual puzzle\n");
+	/*Display*/
+	puts("\"Programming is like building a multilingual puzzle");
 	return (0);
 }
