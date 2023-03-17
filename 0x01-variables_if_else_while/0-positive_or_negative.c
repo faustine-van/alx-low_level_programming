@@ -1,24 +1,24 @@
-#include<stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <stdio.h>
 /**
- *main-dispaly positibe,negative and zero
+ *main - print random number
  *
- *return : 0
+ *Return: 0
 */
 int main(void)
 {
-	double num;
+	int n;
 
-	printf("Enter a number: ");
-	scanf("%lf", &num);
-	if (num <= 0.0)
-	{
-		if (num == 0.0)
-			printf("You entered 0.");
-		else
-			printf("You entered a negative number.");
-	}
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+	/* your code goes there */
+	if (n > 0)
+		printf("%d is positive\n", n);
+	else if
+		printf("%d is positive\n", n);
 	else
-		printf("You entered a positive number.");
-	return (0);
+		printf"(%d is zero\n, n);
 
+	return (0);
 }
