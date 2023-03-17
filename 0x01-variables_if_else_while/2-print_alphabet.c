@@ -1,10 +1,10 @@
 #include<stdio.h>
 #include<ctype.h>
+#include<stdlib.h>
 /**
- * main - entry
- *printing all alphabets using putchar in lower case
- *for loop
- *return : 0
+ *main - entry
+ *
+ *Return: 0
 */
 int main(void)
 {
