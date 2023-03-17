@@ -1,8 +1,8 @@
 #include<stdio.h>
 /**
- *main-entry point
+ * main-entry :printing base 10 only digit
  *
- *print all digit number of base 10 from 0
+ *return 0
 */
 
 int main(void)
