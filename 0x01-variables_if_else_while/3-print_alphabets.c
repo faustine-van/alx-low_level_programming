@@ -1,9 +1,9 @@
 #include<stdio.h>
 #include<ctype.h>
 /**
- *main-entry
- *print all alphabets in lower and upper case
- *return 0
+ *main - entry
+ *
+ *Return: 0
 */
 int main(void)
 {
