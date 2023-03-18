@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include<ctype.h>
 /**
- *main-entry
+ *main - entry
  *
- *return 0 after
+ *Return: 0
 */
 int main(void)
 {
