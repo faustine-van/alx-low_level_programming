@@ -6,23 +6,25 @@
 */
 int main(void)
 {
-	int a, x, p;
+	int d, p, q;
 
-	for (a = '0'; a < '9'; a++)
+	for (d = '0'; d < '9'; d++)
 	{
-		for (x = a + 1; x <= '9'; x++)
+		for (p = d + 1; p <= '9'; p++)
 		{
-			for (p = x + 1; p <= '9'; p++)
-				if ((x != a) != p)
+			for (q = p + 1; q <= '9'; q++)
+			{
+				if ((p != q) != q)
 				{
-					putchar(a);
-					putchar(x);
-					putchar(x);
+					putchar(d);
+					putchar(p);
+					putchar(q);
+					if (d == '7' && p == '8')
+						continue;
+					putchar(',');
+					putchar(' ');
 				}
-			if (a == '7' && x == '8')
-				continue;
-			putchar(',');
-			putchar(' ');
+			}
 		}
 	}
 	putchar('\n');
