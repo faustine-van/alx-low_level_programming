@@ -1,5 +1,4 @@
 # C - Hello, World
-| FirstName     | LastName      | City     |
+| printf()     | putchar      | puts    |
 | ------------- | ------------- | -------- |
-| John          | Test1         | NewYork  |
-| Bob           | Test2         | Toronto  |
+| scanf()        | getchar()         | gets  |
