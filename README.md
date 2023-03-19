@@ -6,7 +6,7 @@ C is the most widely used computer language. It keeps fluctuating at number one 
 
 
     Table of contents projects about c programming
-    :-------------------------------------        :
+    :--------------------------------------------:
     
    |C - Hello, World     | C - Variables, if, else, while      | City  |
 | :------------ |   :---:       | --------: |
