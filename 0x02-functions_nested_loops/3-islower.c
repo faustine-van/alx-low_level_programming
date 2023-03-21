@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- *int _islower(int c) : 
- *
- *Return: 0 if its lower case
+ *_islower - check alphabet in lower case
+ *@c: used to test
+ *Return: 1 if its lower case
 */
 int _islower(int c)
 {
