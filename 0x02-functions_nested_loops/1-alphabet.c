@@ -1,32 +1,18 @@
-#include <stdio.h>
-#include <ctype.h>
+#include "main.h"
 /**
- *main - check the code
+ * print_alphabet - wirte the the lower-case alphabet on a line.
  *
- *Return: Always 0.
  *
- */
-void print_alphabet(void);
-
-int main(void)
-{
-	print_alphabet();
-	return (0);
-}
-/**
- * print_alphabet - Prints "Hello"
  *
- * Return : alphabets in lower case
  */
 void print_alphabet(void)
 {
-	int x;
+	char c;
 
-	for (x = 'A'; x <= 'Z'; x++)
+	for (c = 'a' ; c <= 'z' ; c++)
 	{
-		int lower_x = tolower(x);
-
-		putchar(lower_x);
+		_putchar(c);
 	}
-	putchar('\n');
+	_putchar('\n');
 }
+
