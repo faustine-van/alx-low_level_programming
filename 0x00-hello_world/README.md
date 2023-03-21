@@ -1,1 +1,4 @@
-Here we are create our first project called HELLO WORLD PROGRAM
+# C - Hello, World
+| printf()     | putchar      | puts    |
+| ------------- | ------------- | -------- |
+| scanf()        | getchar()         | gets  |
