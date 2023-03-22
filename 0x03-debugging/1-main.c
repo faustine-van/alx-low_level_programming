@@ -9,7 +9,6 @@ int main(void)
 {
 	int i;
 
-	/* infinity loop*/
 	printf("Infinite loop incoming :(\n");
 
 	i = 0;
