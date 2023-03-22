@@ -1,24 +1,34 @@
-#include <stdlib.h>
-#include <time.h>
 #include <stdio.h>
 /**
- *main - entry : prints the first 50 Fibonacci numbers, starting with 1 and 2
- *
- *Return: 0
+ * main - main block
+ * Description: Print the first 50 fibonacci numbers, starting with 1 and 2.
+ * Numbers must be coma and space separated.
+ * Return: 0
 */
+
 int main(void)
 {
-	int i;
-	int n = 1, t = 2;
-	int sum = n + t;
+	int i = 3; /* the first */
+	long int t1 = 1, t2 = 2;
+	long int next = t1 + t2;
 
-	printf("%d, %d, ", n, t);
-	for (i = 3; i <= 50; i++)
+	printf("%lu, ", t1);
+	printf("%lu, ", t2);
+
+	while (i <= 50)
 	{
-		printf("%d, ", sum);
-		n = t;
-		t = sum;
-		sum = n + t;
+		if (i == 50)
+		{
+			printf("%lu \n", next);
+		}
+		else
+		{
+			printf("%lu, ", next);
+		}
+		t1 = t2;
+		t2 = next;
+		next = t1 + t2;
+		i++;
 	}
 	return (0);
 }
