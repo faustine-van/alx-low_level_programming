@@ -30,6 +30,5 @@ int main(void)
 		next = t1 + t2;
 		i++;
 	}
-	putchar('\n');
 	return (0);
 }
