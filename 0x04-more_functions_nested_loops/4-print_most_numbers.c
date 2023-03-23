@@ -1,21 +1,20 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- *print_numbers - uppercase letters
+ * print_most_numbers - prints
  *
- *Return: 0 or 1
+ * Return: void
  */
+
+
 void print_most_numbers(void)
 {
-	int c;
+	char c;
 
-	for (c = 0; c < 10; c++)
+	for (c = '0'; c <= '9'; c++)
 	{
-		if (c != 2 && c != 4)
-		{
-			_putchar(c + '0');
-		}
+		if (!(c == '2' || c == '4'))
+			_putchar(c);
 	}
 	_putchar('\n');
 }
