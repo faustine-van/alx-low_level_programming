@@ -35,4 +35,4 @@ void print_number(int n)
 		print_number(number / 10);
 	}
 	_putchar((number % 10) + '0');
-} 
+}
