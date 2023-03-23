@@ -1,23 +1,23 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- *more_numbers - uppercase letters
+ * more_numbers - nmbr fct
  *
- *Return: 0 or 1
+ * Return: no return
  */
+
 void more_numbers(void)
 {
-	int c;
-	int b;
 
-	for (c = 0; c < 10; c++)
+int i, j;
+	for (i = 1; i <= 10; i++)
 	{
-		for(b = 0; b <= 14; b++)
+		for (j = 0; j < 15; j++)
 		{
-			_putchar('0' + b % 10);
+			if (j >= 10)
+			_putchar('1');
+			_putchar(j % 10 + '0');
 		}
-		_putchar('\n');
-	}
-	_putchar('\n');
+			_putchar('\n');
+		}
 }
