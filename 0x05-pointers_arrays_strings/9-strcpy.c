@@ -4,19 +4,11 @@
 /**
  *_strcpy - copies string from src to dest
  *@dest: variable pointer to be pointed to
- *@dest: variable used to copy to the dest
+ *@src: variable used to copy to the dest
+  *Return: return dest
 */
 char *_strcpy(char *dest, char *src)
 {
-	dest = strcpy(dest, src); 
-
-	/*while(*src)
-	{
-		*dest = *src;
-		src++;
-		dest++;
-	}*/
-	/*dest = '\0';*/
-	return(dest);
-
+	dest = strcpy(dest, src);
+	return (dest);
 }
