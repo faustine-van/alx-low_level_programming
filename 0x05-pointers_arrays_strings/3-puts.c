@@ -1,5 +1,5 @@
 #include "main.h"
-#define MAXSTRING 80
+#define MAXSTRING 446
 /**
  *_puts - print a string
  *@str: pointer variable to be used;
