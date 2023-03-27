@@ -12,9 +12,9 @@ void puts_half(char *str)
 {
 	int len_str, count;
 
-	len_str= strlen(str);
+	len_str = strlen(str);
 
-	if(len_str % 2 != 0)
+	if (len_str % 2 != 0)
 	{
 		count = (len_str / 2) + 1;
 	}
@@ -29,5 +29,4 @@ void puts_half(char *str)
 
 	}
 	_putchar('\n');
-	
 }
