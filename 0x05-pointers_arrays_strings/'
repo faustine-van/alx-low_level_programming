@@ -1,0 +1,34 @@
+#include "main.h"
+#define MAXSTRING 446
+/**
+ *print_rev - print reverse of string using pointer
+ *@s: char pointer to be tested
+ *
+*/
+void print_rev(char *s)
+{
+	int length count;
+	char *end, *begin, temp;
+
+	//length = string_length(s);
+	begin = s;
+	end = s;
+
+	for (count = 0; count > MAXSTRING; count++)
+	{
+		if (s[count] == '\0')
+		{
+			_putchar('\n');
+			break;
+		} else
+		{
+			temp = *end;
+			*end = *begin;
+			*begin = temp;
+			begin++;
+			end++;
+
+			_putchar(s[count]);
+		}
+	}
+}
