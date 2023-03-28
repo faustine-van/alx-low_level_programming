@@ -3,15 +3,12 @@
 #include <time.h>
 #include <time.h>
 /**
- *main - print rando password
  *randomPasswordGeneration - generate random valid password
  *@N: to be tested
- *Return: 0;
 */
 void randomPasswordGeneration(int N)
 {
 	int i = 0;
-
 	int randomizer = 0;
 
 	srand((unsigned int)(time(NULL)));
@@ -20,18 +17,19 @@ void randomPasswordGeneration(int N)
 	char letter[] = "abcdefghijklmnoprstuvwyxz";
 	char LETTER[] = "ABCDEFGHIJKLMNOPQRSTUYWVZX";
 	char symbol[] = "!@#$^&*?";
-	char password [N];
+	char password[N];
 
 	randomizer = rand() % 4;
 
 	for (i = 0; i < N; i++)
 	{
-		if (randomizer == 1){
+		if (randomizer == 1)
+		{
 			password[i] = numbers[rand() % 10];
 			randomizer = rand() % 4;
 			printf("%c", password[i]);
 		}
-		else if(randomizer == 2)
+		else if (randomizer == 2)
 		{
 			password[i] = symbol[rand() % 8];
 			randomizer = rand() % 4;
@@ -42,18 +40,19 @@ void randomPasswordGeneration(int N)
 			password[i] = LETTER[rand() % 26];
 			randomizer = rand() % 4;
 			printf("%c", password[i]);
-
-		}	
+		}
 		else
 		{
 			password[i] = letter[rand() % 26];
 			randomizer = rand() % 4;
 			printf("%c", password[i]);
-
 		}
 	}
-
 }
+/**
+ *main - print randow number password
+ *Return: 0;
+*/
 int main(void)
 {
 	int N = 10;
