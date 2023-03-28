@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <time.h>
+#define SIZE 200
 /**
  *randomPasswordGeneration - generate random valid password
  *@N: to be tested
@@ -14,7 +15,7 @@ void randomPasswordGeneration(int N)
 	char letter[] = "abcdefghijklmnoprstuvwyxz";
 	char LETTER[] = "ABCDEFGHIJKLMNOPQRSTUYWVZX";
 	char symbol[] = "!@#$^&*?";
-	char password[N];
+	char pass[200];
 
 	srand((unsigned int)(time(NULL)));
 
@@ -24,29 +25,30 @@ void randomPasswordGeneration(int N)
 	{
 		if (randomizer == 1)
 		{
-			password[i] = numbers[rand() % 10];
+			pass[i] = numbers[rand() % 10];
 			randomizer = rand() % 4;
-			printf("%c", password[i]);
+			printf("%c", pass[i]);
 		}
 		else if (randomizer == 2)
 		{
-			password[i] = symbol[rand() % 8];
+			pass[i] = symbol[rand() % 8];
 			randomizer = rand() % 4;
-			printf("%c", password[i]);
+			printf("%c", pass[i]);
 		}
 		else if (randomizer == 3)
 		{
-			password[i] = LETTER[rand() % 26];
+			pass[i] = LETTER[rand() % 26];
 			randomizer = rand() % 4;
-			printf("%c", password[i]);
+			printf("%c", pass[i]);
 		}
 		else
 		{
-			password[i] = letter[rand() % 26];
+			pass[i] = letter[rand() % 26];
 			randomizer = rand() % 4;
-			printf("%c", password[i]);
+			printf("%c", pass[i]);
 		}
 	}
+	printf("\n");
 }
 /**
  *main - print randow number password
