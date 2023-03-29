@@ -8,23 +8,21 @@
 */
 int _strcmp(char *s1, char *s2)
 {
-	int i;
+	int i = 0;
 	int result;
 
-	for (i = 0; *(s1 + i) == *(s2 + i) && *(s1 + i) == '\0';i++)
-
-	if (*(s1 + i) < *(s2 + i))
+	while (s1[i] != '\0' || s2[i] != '\0')
 	{
-		result = *(s1 + i);
+		result = s1[i] - s2[i];
+		if (result != 0)
+		{
+			if (result < 0)
+			{
+				return (-1);
+			}
+			return (1);
+		}
+		i++;
 	}
-	else if (*(s1 + i) > *(s2 + i))
-	{
-		result = *(s2 + i);
-
-	}
-	else
-	{
-		result = 0;
-	}
-	return (result);
+	return (0);
 }
