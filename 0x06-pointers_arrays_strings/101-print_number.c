@@ -1,7 +1,7 @@
 #include "main.h"
 /**
- *
- *
+ *print_number - print integers using _putchar function
+ *@n: to be tested
  *
 */
 void print_number(int n)
