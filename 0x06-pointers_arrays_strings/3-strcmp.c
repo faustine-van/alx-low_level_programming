@@ -18,9 +18,9 @@ int _strcmp(char *s1, char *s2)
 		{
 			if (result < 0)
 			{
-				return (-15);
+				return -*s1;
 			}
-			return (15);
+			return *s2;
 		}
 		i++;
 	}
