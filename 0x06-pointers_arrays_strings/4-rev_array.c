@@ -3,7 +3,7 @@
 #define MAX_SIZE 100
 
 /**
- * main - check the code
+ * reverse_array - check the code
  * @a: an array of integers
  * @n: the number of elements to swap
  *
@@ -13,7 +13,7 @@ void reverse_array(int *a, int n)
 {
 	int i;
 
-	for (i = n -1; i >= 0; i--)
+	for (i = n - 1; i >= 0; i--)
 	{
 		printf("%d", a[i]);
 		if (i != 0)
