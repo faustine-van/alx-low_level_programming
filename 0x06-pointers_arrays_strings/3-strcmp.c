@@ -11,15 +11,15 @@ int _strcmp(char *s1, char *s2)
 	int i;
 	int result;
 
-	for (i = 0; *(s1 + i) == *(s2 + i) && *(s1 + i) == '\0';)
+	for (i = 0; *(s1 + i) == *(s2 + i) && *(s1 + i) == '\0';i++)
 
 	if (*(s1 + i) < *(s2 + i))
 	{
-		result = -15;
+		result = *(s1 + i);
 	}
 	else if (*(s1 + i) > *(s2 + i))
 	{
-		result = 15;
+		result = *(s2 + i);
 
 	}
 	else
