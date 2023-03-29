@@ -11,23 +11,15 @@
  */
 void reverse_array(int *a, int n)
 {
-	/*pointer to array[n -1]*/
-	int *str1, *str2;
-	str1 = 0;
-	str2 = a - 1;
+	int i;
 
-	while (str1 < str2)
+	for (i = n -1; i >= 0; i--)
 	{
-		int temp;
-		temp = *str1[n];
-		*str2[n] = temp;
-
-		str1++;
-		str2++;
-
+		printf("%d", a[i]);
+		if (i != 0)
+		{
+			printf(", ");
+		}
 	}
-	/*
-		if (n != 0)
-		{*/
 	printf("\n");
 }
