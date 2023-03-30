@@ -18,11 +18,11 @@ int _strcmp(char *s1, char *s2)
 		{
 			if (result < 0)
 			{
-				return (-*s1);
+				return (result);
 			}
-			return (*s2);
+			return (result);
 		}
 		i++;
 	}
-	return (0);
+	return (result);
 }
