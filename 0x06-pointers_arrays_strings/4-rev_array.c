@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <stdlib.h>
 #define MAX_SIZE 100
 
 /**
@@ -22,4 +23,5 @@ void reverse_array(int *a, int n)
 		}
 	}
 	printf("\n");
+	exit(0);
 }
