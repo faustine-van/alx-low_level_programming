@@ -1,31 +1,39 @@
 #include "main.h"
 #include <string.h>
+#include <stdio.h>
 #include <stdlib.h>
-
+/**
+ *_atoi - convert string into integers
+ *@s: to be tesed
+ *Return: s
+*/
 int _atoi(char *s)
 {
-	int i, d, n, len , f, digit;
+	int a, sig, start;
+	unsigned int num;
 
-	i = 0;
-	d = 0;
-	n = 0;
-	len = 0;
-	f = 0;
-	digit = 0;
-
-	while (s(len) != '\0')
-		len++;
-	while (i < len && f == 0)
+	if (s[0] == '-')
 	{
-		if(s[i] == '-')
-			++d;
-		if (d % 2)
-			digit = -digit;
-		n = n* 10 + digit;
-		f = 1;
-		if(s[i + 1] < '0' || s[i + 1 > '0'])
-			break;
+		sig = -1;
 	}
-	i++;
-	return (0)
+	if (sig == -1)
+	{
+		start = 1;
+	}
+	else
+	{
+		start = 0;
+	}
+	num = 0;
+
+
+	for (a = start; s[a] != '\0'; a++)
+	{
+		num = num * 10 + s[a] - 48;
+	}
+	if (sig == -1)
+	{
+		num = -num;
+	}
+	return (num);
 }
