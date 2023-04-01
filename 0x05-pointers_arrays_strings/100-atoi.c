@@ -2,6 +2,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 /**
  *_atoi - convert string into integers
  *@s: to be tesed
@@ -9,7 +10,8 @@
 */
 int _atoi(char *s)
 {
-	int a, sig, start;
+	unsigned int a;
+	int sig, start;
 	unsigned int num;
 
 	if (s[0] == '-')
@@ -29,11 +31,14 @@ int _atoi(char *s)
 
 	for (a = start; s[a] != '\0'; a++)
 	{
+		if (isdigit(s[a])){
 		num = num * 10 + s[a] - 48;
+		}
 	}
 	if (sig == -1)
 	{
 		num = -num;
-	}
+	} 
+
 	return (num);
 }
