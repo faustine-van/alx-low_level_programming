@@ -10,22 +10,37 @@
 */
 int _atoi(char *s)
 {
-	int i = 0;
+	int a;
 	unsigned int value = 0;
-	int current;
+	int current, sig, start;
 
-	if (s[i] == '-')
+	sig = 1;
+
+	if (s[0] == '-')
 	{
-		value *= -1;
+		sig = -1;
 	}
-	while (s[i] != '\0')
+	if (sig == -1)
 	{
-		if (isdigit(s[i]))
+		start = 1;
+	}
+	else
+		start = 0;
+
+	a = start;
+
+	while (s[a] != '\0')
+	{
+		if (isdigit(s[a]))
 		{
-			current = s[i] - 48;
+			current = s[a] - 48;
 			value = 10 * value + current;
 		}
-		i++;
+		a++;
+	}
+	if (start == 1)
+	{
+		value *= -1;
 	}
 	return (value);
 }
