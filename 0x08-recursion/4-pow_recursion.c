@@ -3,7 +3,7 @@
  *_pow_recursion - return value of x raised to the power of y
  *@y: power value
  *@x: base value
- *Return: x
+ *Return: x; 
 */
 int _pow_recursion(int x, int y)
 {
@@ -15,6 +15,7 @@ int _pow_recursion(int x, int y)
 	{
 		return (1);
 	}
+	/*if y = 2 then x * x */
 	if (y == 2)
 		return (x * x);
 
