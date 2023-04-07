@@ -1,4 +1,4 @@
-# C - Static libraries
+# C - Static libraries and create bash file create script
 
 Static libraries are just collections of object files that are linked into the program during the linking phase of compilation, and are not relevant during runtime.
 ## Table of contents
@@ -26,3 +26,8 @@ we use static libraries using "$ gcc  -L. -lname -o main"
 - $ ranlib libname.a 
 or by adding an extra flag (-s) to the ar command and it becomes like this:
 - $ ar -rcs libname.a *.o : this is same as  $ ranlib libname.a : used to indexing files
+
+# create bash file create script static libraries
+
+- ar -rc liball.a *.o create static libraries
+
