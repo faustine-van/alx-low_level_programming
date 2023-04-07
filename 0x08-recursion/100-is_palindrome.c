@@ -1,6 +1,7 @@
 #include "main.h"
 #include <string.h>
 #include <stdio.h>
+#define MAXSTRING 500
 /**
  *string_rev - print reverse recursively
  *@p: pointer point to string to be reverse
@@ -32,7 +33,7 @@ void string_rev(char *p, int begin, int end)
 */
 int is_palindrome(char *s)
 {
-	char rev[200];
+	char rev[MAXSTRING];
 
 	strcpy(rev, s);
 	string_rev(rev, 0, strlen(s) - 1);
