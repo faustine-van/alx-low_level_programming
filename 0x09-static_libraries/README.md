@@ -22,3 +22,7 @@ we use static libraries using "$ gcc  -L. -lname -o main"
 -gcc: command to compile using the follow option 
 -L: specifies path to the given libraries "." referring to current directories
 -o: create executed file
+## In addition there are other command that used:
+- $ ranlib libname.a 
+or by adding an extra flag (-s) to the ar command and it becomes like this:
+$ ar -rcs libname.a *.o : this is same as  $ ranlib libname.a : used to indexing files
