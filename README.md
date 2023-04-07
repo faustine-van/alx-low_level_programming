@@ -8,7 +8,10 @@ C is the most widely used computer language. It keeps fluctuating at number one 
 ##Table of contents projects about c programming
 :--------------------------------------------:
     
-   |C - Hello, World     | C - Variables, if, else, while      | City  |
+   |C - Hello, World     | C - Variables, if, else, while      | C - Functions, nested loops  |
 | :------------ |   :---:       | --------: |
-| `John`        | Test1         | `NewYork`   |
-| `Bob`         | Test2         | `Los Angeles`   | 
+| ` 0x03. C - Debugging`        |  More functions, more nested loops         | `NewYork`   |
+| ` Pointers, arrays and strings `         |  More pointers, arrays and strings        | ` Even more pointers, arrays and strings`   | 
+| C Recursion     |  Static libraries      | argc, argv  |
+| ` 0x03. C - Debugging`        |  More functions, more nested loops         | `NewYork`   |
+| ` Pointers, arrays and strings `         |  More pointers, arrays and strings        | ` Even more pointers, arrays and strings`   | 
