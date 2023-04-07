@@ -32,7 +32,7 @@ void string_rev(char *p, int begin, int end)
 */
 int is_palindrome(char *s)
 {
-	char rev[20];
+	char rev[200];
 
 	strcpy(rev, s);
 	string_rev(rev, 0, strlen(s) - 1);
