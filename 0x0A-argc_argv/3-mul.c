@@ -17,11 +17,13 @@ int main(int argc, char *argv[])
 		for (a = 1; a < argc; a++)
 		{
 			mul *= atoi(argv[a]);
-
 		}
 		printf("%d\n", mul);
 	}
 	else
+	{
 		printf("Error\n");
-	return (1);
+		return (1);
+	}
+	return (0);
 }
