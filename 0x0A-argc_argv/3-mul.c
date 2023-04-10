@@ -9,6 +9,7 @@
 int main(int argc, char *argv[])
 {
 	int a, mul;
+	char *long_num;
 
 	mul = 1;
 
@@ -16,7 +17,7 @@ int main(int argc, char *argv[])
 	{
 		for (a = 1; a < argc; a++)
 		{
-			mul *= atoi(argv[a]);
+			mul *= strtol(argv[a], &long_num, 10);
 		}
 		printf("%d\n", mul);
 	}
