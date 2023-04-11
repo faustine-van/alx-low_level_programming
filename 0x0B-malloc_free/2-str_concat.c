@@ -22,6 +22,11 @@ char *str_concat(char *s1, char *s2)
 	strcpy(str, s1);
 	strcat(str, s2);
 
+	if (s1 == NULL)
+		return str;
+	if (s2 == NULL)
+		return (str);
+
 
 	return (str);
 	free(str);
