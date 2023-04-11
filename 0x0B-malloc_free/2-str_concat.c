@@ -11,14 +11,17 @@ char *str_concat(char *s1, char *s2)
 
 	char *str;
 
-	str = (char *) malloc(strlen(s1) + strlen(s2 + 1));
+	str = (char *) malloc((strlen(s1) + 1) + (strlen(s2 + 1)));
+
+	if (str == NULL)
+	{
+		str = '\0';
+		return (NULL);
+	}
 
 	strcpy(str, s1);
 	strcat(str, s2);
 
-	if (str == NULL)
-
-		return (NULL);
 
 	return (str);
 	free(str);
