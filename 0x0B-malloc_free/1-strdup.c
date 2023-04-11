@@ -10,16 +10,20 @@
 char *_strdup(char *str)
 {
 	char *ptr;
-	int a;
+	int a, len;
 
-	int len = strlen(str) + 1;
+	if (str == NULL)
+	{
+		return (NULL);
+	}
+
+	len = strlen(str) + 1;
 
 	ptr = malloc(len);
 
 		/*strcpy(ptr, str);*/
 	if (ptr == NULL)
 		return (NULL);
-	
 	a = 0;
 	while (a < len)
 	{
