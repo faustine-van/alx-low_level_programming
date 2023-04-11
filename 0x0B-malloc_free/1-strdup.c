@@ -10,25 +10,18 @@
 char *_strdup(char *str)
 {
 	char *ptr;
+	int a;
 
 	int len = strlen(str) + 1;
 
 	ptr = malloc(len);
 
-	if (str == NULL)
-		return (NULL);
-
-	if (ptr != NULL)
-	{
-
 		/*strcpy(ptr, str);*/
-		int a = 0;
-
-		while (a < len)
-		{
-			ptr[a] = str[a];
-			a++;
-		}
+	a = 0;
+	while (a < len)
+	{
+		ptr[a] = str[a];
+		a++;
 	}
 	if (ptr == NULL)
 		return (NULL);
