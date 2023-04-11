@@ -8,25 +8,28 @@
 */
 char *str_concat(char *s1, char *s2)
 {
-
 	char *str;
+
+	if (s1 == NULL)
+	{
+		s1 = "";
+	}
+	if (s2 == 0)
+	{
+		s2 = "";
+	}
 
 	str = (char *) malloc(strlen(s1) + (strlen(s2 + 1) + 2));
 
+
 	if (str == NULL)
 	{
-		str = '\0';
 		return (NULL);
 	}
 
+
 	strcpy(str, s1);
 	strcat(str, s2);
-
-	if (s1 == NULL)
-		return str;
-	if (s2 == NULL)
-		return (str);
-
 
 	return (str);
 	free(str);
