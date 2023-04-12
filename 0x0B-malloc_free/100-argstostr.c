@@ -13,7 +13,6 @@ char *argstostr(int ac, char **av)
 {
 	int a;
 	char *ptr;
-	int len;
 
 	if (ac == 0 || av == NULL)
 	{
@@ -25,10 +24,9 @@ char *argstostr(int ac, char **av)
 	len = 0;
 	for (a = 0; a < ac; a++)
 	{
-		len += strlen(av[a]);
 		printf("%s\n", av[a]);
 	}
-	ptr = malloc(len + 1 * sizeof(char));
+	ptr = malloc(ac - 1 * sizeof(char));
 
 	if (ptr == NULL)
 		return (NULL);
