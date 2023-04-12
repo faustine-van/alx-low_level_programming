@@ -21,7 +21,7 @@ char *argstostr(int ac, char **av)
 
 	ptr = malloc(ac * sizeof(char *));
 
-	len = 0;
+
 	for (a = 0; a < ac; a++)
 	{
 		printf("%s\n", av[a]);
