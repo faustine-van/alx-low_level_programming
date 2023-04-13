@@ -29,4 +29,5 @@ int *array_range(int min, int max)
 		ptr[a] = min++;
 	}
 	return (ptr);
+	free(ptr);
 }
