@@ -6,7 +6,7 @@
  *@s1: destination of string
  *@s2: source string
  *@n: number of size
- *Return: ptr;
+ *Return: ptr
 */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
@@ -37,5 +37,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	strncat(ptr, s2, n);
 
 	return (ptr);
+	free(ptr);
 }
 
