@@ -29,14 +29,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	ptr = malloc(len + n + 1);
 
-	if (ptr == NULL)
-	{
-		return (NULL);
-	}
 	strcpy(ptr, s1);
 	strncat(ptr, s2, n);
 
 	return (ptr);
-	free(ptr);
 }
 
