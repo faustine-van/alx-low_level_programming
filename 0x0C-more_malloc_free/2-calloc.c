@@ -25,6 +25,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		return (NULL);
 	}
-		memset(ptr, 0, nmemb * size);
+	/*set allocated memory to 0*/
+	memset(ptr, 0, nmemb * size);
 	return (ptr);
 }
