@@ -21,6 +21,9 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 
 	if (ptr == NULL)
+	{
+		exit(0);
 		return (NULL);
+	}
 	return (ptr);
 }
