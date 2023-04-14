@@ -30,6 +30,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		if (nptr == NULL)
 		{
 			return (NULL);
+
 		}
 	}
 	else
@@ -37,7 +38,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		nptr = malloc(new_size);
 		if (nptr == NULL)
 		{
-			return (NULL);
+			exit(1);
 		}
 		/* memcpy(nptr, ptr, new_size );*/
 		memcpy(nptr, ptr, old_size > new_size ? old_size : new_size);
