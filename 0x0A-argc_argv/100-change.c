@@ -1,16 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- *main - print the minimum number of coins to make changes for 
+ *main - print the minimum number of coins to make changes for
  *for amount of money
- *@
- *@
- *
+ *@argc: number of argument in the command line
+ *@argv: pointer point the array
+ *Return: 0
 */
 int main(int argc, char **argv)
 {
 	int a, b, cent_number;
 	int cent[5];
+
 	cent[0] = 25;
 	cent[1] = 10;
 	cent[2] = 5;
@@ -33,7 +34,7 @@ int main(int argc, char **argv)
 	{
 		for (b = 0; b < 5 && cent_number > 0; b++)
 		{
-			while(cent_number >= cent[b])
+			while (cent_number >= cent[b])
 			{
 				a++;
 				cent_number -= cent[b];
