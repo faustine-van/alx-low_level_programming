@@ -1,19 +1,25 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "main.h"
+#include <string.h>
 /**
  *multiplies number
  *@argc: number of arguments
  *@argv: pointer point to the array
  *Return: 0
 */
+void my_putchar(long int inte_gers);
 int main(int argc, char __attribute__((unused))**argv)
 {
-	int mul, num1, num2,a;
+	long int *mul, num1, num2;
+	int a;
 	char *long_num;
+	int *ptr;
 	char print[5] =  "Error";
 
 	mul = 1;
+
+	ptr = malloc(argc * sizeof(mul));
 
 	if (argc != 3)
 	{
@@ -26,6 +32,7 @@ int main(int argc, char __attribute__((unused))**argv)
 	else
 	{
 			num1 = strtol(argv[1], &long_num, 10);
+
 			num2 = strtol(argv[2], &long_num, 10);
 
 			if (*long_num)
@@ -37,9 +44,23 @@ int main(int argc, char __attribute__((unused))**argv)
 			{
 				mul = num1 * num2; 
 			}
-		_putchar(48 + mul / 10);
-		/*_putchar(mul % 10 + 48);*/
+		strcpy(ptr, mul);	
+		my_putchar(ptr);
 		_putchar('\n');
 	}
-	return (0);
+	return (ptr);
+}
+
+void my_putchar(long int inte_gers)
+{
+	if (inte_gers < 0)
+	{
+		_putchar('-');
+		inte_gers *= inte_gers * -1;
+	}
+	if (inte_gers == 0)
+		_putchar('0');
+	if (inte_gers / 10)
+		my_putchar(inte_gers / 10);
+	_putchar(inte_gers % 10 + '0');
 }
