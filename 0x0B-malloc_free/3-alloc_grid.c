@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
+#include <stddef.h>
 /**
  *alloc_grid - allocate space for return pointer to 2d dimension
  *@width: to be used
@@ -21,6 +22,7 @@ int **alloc_grid(int width, int height)
 
 	if (ptr == NULL)
 	{
+		free(ptr);
 		return (NULL);
 	}
 
@@ -30,11 +32,11 @@ int **alloc_grid(int width, int height)
 
 		if (ptr[a] == NULL)
 		{
-			/*for (b = 0; b < a; b++)
+			for (b = 0; b < a; b++)
 			{
 				free(ptr[a]);
 			}
-			free(ptr);*/
+			free(ptr);
 			return (NULL);
 		}
 		for (b = 0; b < width; b++)
@@ -44,6 +46,4 @@ int **alloc_grid(int width, int height)
 		}
 	}
 	return (ptr);
-	free(ptr[a]);
-	free(ptr);
 }
