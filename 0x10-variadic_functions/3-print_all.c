@@ -15,10 +15,6 @@ void print_all(const char * const format, ...)
 
 	va_start(args, format);
 	form = (char *) format; /*create nonconstant*/
-	if (form == NULL)
-	{
-		return;
-	}
 	while (*form != '\0')
 	{
 		switch (*form)
