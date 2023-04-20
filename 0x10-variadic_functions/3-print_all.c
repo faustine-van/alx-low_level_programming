@@ -1,6 +1,7 @@
 #include <stdarg.h>
 #include <stdio.h>
 #include "variadic_functions.h"
+#include <string.h>
 /**
  *print_all - print anything such character , string , integers and float
  *@format: format string
@@ -15,7 +16,7 @@ void print_all(const char * const format, ...)
 
 	va_start(args, format);
 	form = (char *) format; /*create nonconstant*/
-	while (*form != '\0')
+	while (*form != '\0' && strlen(form) <= 9)
 	{
 		switch (*form)
 		{
