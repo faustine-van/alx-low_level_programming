@@ -42,5 +42,7 @@ int _atoi(char *s)
 	{
 		value *= -1;
 	}
+	else
+		value = value;
 	return (value);
 }
