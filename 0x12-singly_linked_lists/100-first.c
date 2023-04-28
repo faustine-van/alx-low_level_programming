@@ -6,6 +6,7 @@
  *print_str_before - print string before
  *the main function is executed.
 */
+void print_str_before(void) __attribute__((constructor));
 void print_str_before(void)
 {
 	printf("You're beat! and yet, you must allow,\n");
