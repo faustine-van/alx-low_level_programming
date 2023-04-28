@@ -21,8 +21,9 @@ list_t *add_node_end(list_t **head, const char *str)
 	if (new == NULL)
 		return (NULL);
 
-	new->str = strdup(str);
+	new->str = strdup(str);/*Link data field of newNode*/
 	new->len = strlen(str);
+	/*make sure new node points to NULL*/
 	new->next = NULL;
 
 	/*inserts at the end of the linked list*/
