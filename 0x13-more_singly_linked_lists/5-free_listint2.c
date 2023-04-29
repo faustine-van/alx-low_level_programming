@@ -17,7 +17,7 @@ void free_listint2(listint_t **head)
 
 	/*checking if the head pointer itself is NULL*/
 	/*or if the node it's pointing to is NULL.*/
-	if (head == NULL && *head == NULL)
+	if (head == NULL || *head == NULL)
 	{
 		return;
 	}
