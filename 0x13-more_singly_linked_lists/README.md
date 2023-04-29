@@ -2,12 +2,12 @@
 
 ## Description
 
-this task is for using singled linked list
+This task is for using singled linked list
 
 ## usage
--All your files will be compiled on Ubuntu 20.04 LTS
--run using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89
--The prototypes of all your functions should be included in your header file called lists.h
+- All your files will be compiled on Ubuntu 20.04 LTS
+- run using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89
+- The prototypes of all your functions should be included in your header file called lists.h
 
 ### More info
 
