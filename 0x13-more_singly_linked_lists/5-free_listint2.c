@@ -4,8 +4,8 @@
 #include "lists.h"
 
 /**
- * free_listint2 - function that frees a listint_t list
- *@head: point to the listint_t lsi
+ *free_listint2 - function that frees a listint_t list
+ *@head: pointer to pointer to the listint_t list
  *Description: it cannot modify the head pointer itself,
  *and so it cannot set it to NULL after freeing the list.
  *This function is useful if you do not need to modify
