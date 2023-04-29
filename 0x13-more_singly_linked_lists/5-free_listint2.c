@@ -12,11 +12,11 @@ void free_listint2(listint_t **head)
 {
 	listint_t *temp;
 
-	while (*head != NULL)
+	while (*head != NULL)/*traverse entire list.*/
 	{
-		temp = *head;
-		*head = (*head)->next;
-		free(temp);
+		temp = *head;/*save node pointer.*/
+		*head = (*head)->next;/*advance to next*/
+		free(temp);/**free the saved one*/
 	}
-	*head = NULL;
+	*head = NULL; /* finally, mark as empty list */
 }
