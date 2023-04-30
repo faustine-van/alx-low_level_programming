@@ -48,12 +48,13 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	}
 	else
 	{
-		for (a = 0; a < index - 1 && size > index; a++)
+		for (a = 0; a < index - 1; a++)
 		{
 			/*Now temp pointer points to the previous node*/
 			/*of the node to be deleted*/
 			delete = delete->next;
-			size++;
+			if (delete != NULL)
+				break;
 		}
 		if (delete  == NULL)
 			return (-1);
