@@ -29,4 +29,6 @@ void free_listint(listint_t *head);
 void free_listint2(listint_t **head);
 /*function that inserts a new node at a given position.*/
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n);
+/*function that sum nodes*/
+int sum_listint(listint_t *head);
 #endif
