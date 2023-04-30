@@ -14,10 +14,9 @@ typedef struct listint_s
 	int n;
 	struct listint_s *next;
 } listint_t;
-
 /*function that prints all the elements of a listint_t list.*/
 size_t print_listint(const listint_t *h);
-/*function that returns the number of elements in a linked listint_t list*/
+/*function that returns the number of elements in a contant linked listint_t list*/
 size_t listint_len(const listint_t *h);
 /*function that adds a new node at the beginning of a listint_t list.*/
 listint_t *add_nodeint(listint_t **head, const int n);
@@ -33,6 +32,6 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n);
 int sum_listint(listint_t *head);
 /*function that returns the nth node of a listint_t linked list.*/
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index);
-/*unction that deletes the head node of a listint_t linked list*/
-int pop_listint(listint_t **head);
+int pop_listint(listint_t **head);/*delete the head node at the beginning*/
+int delete_nodeint_at_index(listint_t **head, unsigned int index); /* del nth*/ 
 #endif
