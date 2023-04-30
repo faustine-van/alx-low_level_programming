@@ -28,7 +28,7 @@ unsigned int getsize(listint_t *head)
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
 	listint_t *delete = *head;/*Creat a temporary variable point to head*/
-	unsigned int a; /*size  =  getsize(*head);/get size of node*/
+	unsigned int a, size  =  getsize(*head);/*get size of node*/
 	listint_t *prev;
 
 	if (*head == NULL)
@@ -36,7 +36,10 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		/*check if list is empty*/
 		return (-1);
 	}
-
+	if (index > size)/*check if index  is greater than number of node*/
+	{
+		return (-1);
+	}
 	if (index == 0)
 	{
 		*head = (*head)->next;/*store head on next node*/
@@ -51,6 +54,8 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 			/*of the node to be deleted*/
 			delete = delete->next;
 		}
+		if (delete  == NULL)
+			return (-1);
 		prev = delete->next;/*del pointer points to the node to be deleted*/
 		delete->next = delete->next->next;
 		free(prev);/*delete node*/
