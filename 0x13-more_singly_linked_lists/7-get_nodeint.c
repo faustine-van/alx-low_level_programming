@@ -12,13 +12,22 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
 	listint_t *temp;
 	unsigned int count = 0;
-	temp = head;
-	while (head != NULL)
+
+	if (head == NULL)
 	{
-		if (count == index)
-			return (temp);
-		count++;
-		temp = temp->next;
+		/*check if the node does not exist, return NULL*/
+		return (NULL);
 	}
-	return (temp);
+	else
+	{
+		temp = head;
+		while (head != NULL)
+		{
+			if (count == index)
+				return (temp);
+			count++;
+			temp = temp->next;
+		}
+	}
+	return (NULL);
 }
