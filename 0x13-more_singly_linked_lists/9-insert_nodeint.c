@@ -1,47 +1,53 @@
 #include <stdlib.h>
-#include <string.h>
 #include <stdio.h>
 #include "lists.h"
-
 /**
  *insert_nodeint_at_index - insert new node to any given position
  *@head: pointer to pointer to the head node of listint_t list
  *@n: data
- *idx: position given
+ *@idx: position given
  *Return: address of  new node else return NULL
  */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	listint_t *temp, *newNode;
-	unsigned int a;
+	unsigned int i, size = 0;
+	listint_t *current = *head;
+	listint_t *newNode;
 
-	if (!idx)
+	while (current != NULL)
 	{
+		size++;
+		current = current->next;
+	}
+	if (idx > size)
+	{
+		/* Index out of range*/
 		return (NULL);
 	}
 	newNode = malloc(sizeof(listint_t));
 	if (newNode == NULL)
 	{
-		return (NULL);
+		/* Error allocating memory*/
+		return  (NULL);
+	}
+	newNode->n = n;
+	if (idx == 0)
+	{
+		/* Insert at beginning of list*/
+		newNode->next = *head;
+		*head = newNode;
 	}
 	else
 	{
-		newNode->n = n; /* link data part*/
-		temp = *head;
-		/*
-		 *traverse to the n - 1 position
-		 */
-		for (a = 0; a < idx - 1; a++)
+		/* Traverse list to find node before position*/
+		current = *head;
+		for (i = 0; i < idx - 1; i++)
 		{
-			temp = temp->next;/*advance or accept next node*/
-			if (temp == NULL)
-				break;
+			current = current->next;
 		}
-		if (temp != NULL)
-		{
-			newNode->next = temp->next; /*link address part of new node*/
-			temp->next = newNode;
-		}
-		return (newNode);
+		/* Insert new node after node at position-1*/
+		newNode->next = current->next;
+		current->next = newNode;
 	}
+	return (newNode);
 }
