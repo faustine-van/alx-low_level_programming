@@ -12,7 +12,12 @@ listint_t *reverse_listint(listint_t **head)
 {
 	listint_t *temp, *prev;
 
-	if (head != NULL)
+
+	if (*head == NULL)
+	{
+		return (NULL);
+	}
+	else
 	{
 		prev = *head;/*prev pointer point the first node*/
 		*head = (*head)->next;/*head pointer to second node*/
@@ -27,10 +32,6 @@ listint_t *reverse_listint(listint_t **head)
 			temp = *head;
 		}
 		*head = prev;/*make last node as head*/
-	}
-	else
-	{
-		return (NULL);
 	}
 	return (prev);
 }
