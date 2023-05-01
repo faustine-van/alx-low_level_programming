@@ -33,5 +33,6 @@ int sum_listint(listint_t *head);
 /*function that returns the nth node of a listint_t linked list.*/
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index);
 int pop_listint(listint_t **head);/*delete the head node at the beginning*/
-int delete_nodeint_at_index(listint_t **head, unsigned int index); /* del nth*/ 
+int delete_nodeint_at_index(listint_t **head, unsigned int index); /* del nth*/
+listint_t *reverse_listint(listint_t **head);/* reverse listint_t list*/
 #endif
