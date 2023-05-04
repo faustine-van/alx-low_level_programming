@@ -15,8 +15,10 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 
 	while (res != 0)
 	{
-		count += (res & 1);/*res = res & (res - 1);*/
-		res >>= 1;/*count++;*/
+		/*count += (res & 1);*/
+		res = res & (res - 1);
+		/*res >>= 1;*/
+		count++;
 	}
 	return (count);
 }
