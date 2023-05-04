@@ -5,8 +5,11 @@
  */
 int get_endianness(void)
 {
-	int x = 1;
-	int p = (int) (((char *)&x)[0]);
+	int a = 1;
+	char *p = (char *)&a;
 
-	return (p);
+	if (p[0] == 1)
+		return (1); /*little endian*/
+	else
+		return (0); /*big endian*/
 }
