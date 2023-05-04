@@ -9,21 +9,22 @@
 void print_binary(unsigned long int n)
 {
 	int a;
-	int rem_zero = 1;
+	int rem_zero = 0;
 
-	for (a = 31; a >= 0; a--)
+	for (a = 63; a >= 0; a--)
 	{
-		if (n & (1 << a))
+		if ((n >> a) & 1)
 		{
-			rem_zero = 0;
-			_putchar ('1');
+			_putchar('1');
+			rem_zero = 1;
 		}
-		else if (!rem_zero)
+		else if (rem_zero)
 		{
 			_putchar('0');
 		}
 	}
-	if (rem_zero)
+
+	if (!rem_zero)
 	{
 		_putchar('0');
 	}
