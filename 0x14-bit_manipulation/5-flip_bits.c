@@ -22,7 +22,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 		if ((res & 1) == 1)
 		/*res = res & (res - 1);*/
 			count++;
-		res >>= 1;
+		res = res >> 1;/*res >>= 1*/
 	}
 	return (count);
 }
