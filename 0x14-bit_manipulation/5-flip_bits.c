@@ -13,10 +13,6 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	unsigned int count;
 	unsigned int res = n ^ m;
 
-	if (n == 0 && m == 0)
-	{
-		return (0);
-	}
 	for (count = 0; res > 0;)
 	{
 		if ((res & 1) == 1)
