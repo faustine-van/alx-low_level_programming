@@ -21,13 +21,8 @@ int main(int ac, char **av)
 		dprintf(2, "Error: Can't read from file %s\n", av[1]);
 		exit(98);
 	}
-	t_file = open(av[2], O_WRONLY | O_TRUNC,
+	t_file = open(av[2], O_WRONLY | O_CREAT | O_TRUNC,
 			S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
-	if (t_file == -1)
-	{
-		dprintf(2, "Error: Can't write to %s\n", av[2]);
-		exit(99);
-	}
 	while ((read_file = read(f_file, buffer, BUFFER_SIZE)) > 0)
 	{
 		if (write(t_file, buffer, read_file) != read_file)
