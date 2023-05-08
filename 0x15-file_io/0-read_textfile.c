@@ -15,13 +15,12 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	int open_file, read_file1;
 	char *c;
 
-
 	if (filename == NULL)
 	{
 		return (0);
 	}
 
-	c = calloc(letters, sizeof(char));
+	c = calloc((letters + 1), sizeof(char));
 	if (c == NULL)
 		return (0);
 
@@ -37,12 +36,14 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	if (read_file1 == -1)
 	{
+		free(c);
 		close(open_file);
 		return (0);
 	}
 
 	dprintf(1, "%s", c);
 
+	free(c);
 	close(open_file);
 
 	return (read_file1);
