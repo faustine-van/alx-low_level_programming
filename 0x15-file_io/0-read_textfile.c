@@ -26,17 +26,22 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	open_file = open(filename, O_RDONLY);
 
 	if (open_file == -1)
+	{
+		close(open_file);
 		return (0);
+	}
 
 	read_file1 = read(open_file, c, letters);
 
 	if (read_file1 == -1)
+	{
+		close(open_file);
 		return (0);
+	}
 
 	dprintf(1, "%s", c);
 
 	close(open_file);
 
-	free(c);
 	return (read_file1);
 }
