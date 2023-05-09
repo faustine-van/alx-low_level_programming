@@ -9,40 +9,44 @@
  *@filename: file name
  *@letters: number of characters
  *Return: number of character(letters)
-*/
+ */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int open_file, read_file1;
-	char *c;
+	int fd, bytes_read, bytes_written;
+	char *buffer;
 
 	if (filename == NULL)
+		return (0);
+
+	fd = open(filename, O_RDONLY);
+	if (fd == -1)
+		return (0);
+
+	buffer = malloc(sizeof(char) * (letters + 1));
+	if (buffer == NULL)
 	{
+		close(fd);
 		return (0);
 	}
 
-	c = calloc(letters, sizeof(char));
-	if (c == NULL)
-		return (0);
-
-	open_file = open(filename, O_RDONLY);
-
-	if (open_file == -1)
+	bytes_read = read(fd, buffer, letters);
+	if (bytes_read == -1)
 	{
-		close(open_file);
+		free(buffer);
+		close(fd);
 		return (0);
 	}
 
-	read_file1 = read(open_file, c, letters);
-
-	if (read_file1 == -1)
+	bytes_written = write(STDOUT_FILENO, buffer, bytes_read);
+	if (bytes_written == -1 || bytes_written != bytes_read)
 	{
-		close(open_file);
+		free(buffer);
+		close(fd);
 		return (0);
 	}
 
-	dprintf(1, "%s", c);
+	free(buffer);
+	close(fd);
 
-	close(open_file);
-
-	return (1);
+	return (bytes_written);
 }
