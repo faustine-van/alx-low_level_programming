@@ -32,11 +32,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (!newNode)
 		return (0);
 	newNode->key = strdup(key);
-	if (newNode->key == NULL)
-	{
-		free(newNode);
-		return (0);
-	}
 	newNode->value = strdup(value);
 	newNode->next = NULL;
 	/****check if the index is empty*******/
