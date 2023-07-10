@@ -13,7 +13,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	unsigned int index;
 	hash_node_t *currentNode, *newNode;
 
-	if (!ht || !key || !value)
+	if (!ht || !key || strcmp(key, "") == 0)
 		return (0);
 
 	index = key_index((const unsigned char *)key, ht->size);
@@ -41,16 +41,12 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	/****check if the index is empty*******/
 	if (ht->array[index] == NULL)
-	{
 		ht->array[index] = newNode;
-	}
 	else
 	{
 		currentNode = ht->array[index];
 		while (currentNode->next != NULL)
-		{
 			currentNode = currentNode->next;
-		}
 		currentNode->next = newNode;
 	}
 	return (1);
