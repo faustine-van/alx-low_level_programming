@@ -23,18 +23,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 
 	newNode->key = strdup(key);
-	if (newNode->key == NULL)
-	{
-		free(newNode);
-		return (0);
-	}
 	newNode->value = strdup(value);
-	if (newNode->value == NULL)
-	{
-		free(newNode->value);
-		free(newNode);
-		return (0);
-	}
 	newNode->next = NULL;
 
 	/****check if the index is empty*******/
