@@ -13,6 +13,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	unsigned int index;
 	hash_node_t *currentNode, *newNode;
 
+	if (!ht || !key || strcmp(key, "") == 0)
+		return (0);
 
 	index = key_index((const unsigned char *)key, ht->size);
 
@@ -21,7 +23,18 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 
 	newNode->key = strdup(key);
+	if (newNode->key == NULL)
+	{
+		free(newNode);
+		return (0);
+	}
 	newNode->value = strdup(value);
+	if (newNode->value == NULL)
+	{
+		free(newNode->value);
+		free(newNode);
+		return (0);
+	}
 	newNode->next = NULL;
 
 	/****check if the index is empty*******/
