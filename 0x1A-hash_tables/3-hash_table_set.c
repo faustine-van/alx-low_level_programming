@@ -30,20 +30,22 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		currentNode = currentNode->next;
 	}
 	newNode = malloc(sizeof(hash_node_t));
-	if (!newNode)
+	if (newNode == NULL)
 		return (0);
 	newNode->key = strdup(key);
-	newNode->value = strdup(value);
-	newNode->next = NULL;
-	/****check if the index is empty*******/
-	if (ht->array[index] == NULL)
-		ht->array[index] = newNode;
-	else
+	if (newNode->key == NULL)
 	{
-		currentNode = ht->array[index];
-		while (currentNode->next != NULL)
-			currentNode = currentNode->next;
-		currentNode->next = newNode;
+		free(newNode);
+		return (0);
 	}
+	newNode->value = strdup(value);
+	if (newNode->value == NULL)
+	{
+		free(newNode->key);
+		free(newNode);
+		return (0);
+	}
+	newNode->next = ht->array[index];
+	ht->array[index] = newNode;
 	return (1);
 }
