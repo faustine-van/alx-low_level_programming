@@ -38,8 +38,7 @@ typedef struct hash_table_s
 } hash_table_t;
 ```
 ## Resources
-- [doc.python.org] (https://docs.python.org/3/tutorial)
-- [Python Programming: An Introduction to Computer Science 3rd edition](https://nibmehub.com/opac-service/pdf/read/
-		Python%20Programming%20_%20an%20introduction%20to%20computer%20science-%203rd%20Edition.pdf)
+- [All about hash tables] (https://www.digitalocean.com/community/tutorials/hash-table-in-c-plus-plus)
+- [What is a HashTable Data Structure - Introduction to Hash Tables , Part 0](https://www.youtube.com/watch?v=MfhjkfocRR0)
 ## Authors:
 - MUHAYEMARIYA Faustine | [Github](https://github.com/faustine-van).
