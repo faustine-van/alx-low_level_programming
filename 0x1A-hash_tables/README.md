@@ -1,47 +1,41 @@
 # C - Hash tables
 
 
-# PYTHON PROJECTS
+## More Info
 
-## LISTS of PROJECTS
+###Data Structures
 
-* Project1 : Python - Hello, World
-* Project2 : Python - if/else, loops, functions
-* project3 : Python - import & modules
-* project4 : Python - Data Structures: Lists, Tuples
-* project4 : Python - More Data Structures: Set, Dictionary
-* Project5 : Python - Exceptions
-* Project6 : Python - Python - Classes and Objects
-* project7 : Python - Test-driven development
-
-### man or help
-
-* `python3`
-
-## Zen
 ```
-The Zen of Python, by Tim Peters
+Please use these data structures for this project:
 
-Beautiful is better than ugly.
-Explicit is better than implicit.
-Simple is better than complex.
-Complex is better than complicated.
-Flat is better than nested.
-Sparse is better than dense.
-Readability counts.
-Special cases aren't special enough to break the rules.
-Although practicality beats purity.
-Errors should never pass silently.
-Unless explicitly silenced.
-In the face of ambiguity, refuse the temptation to guess.
-There should be one-- and preferably only one --obvious way to do it.
-Although that way may not be obvious at first unless you're Dutch.
-Now is better than never.
-Although never is often better than *right* now.
-If the implementation is hard to explain, it's a bad idea.
-If the implementation is easy to explain, it may be a good idea.
-Namespaces are one honking great idea -- let's do more of those!
+/**
+ * struct hash_node_s - Node of a hash table
+ *
+ * @key: The key, string
+ * The key is unique in the HashTable
+ * @value: The value corresponding to a key
+ * @next: A pointer to the next node of the List
+ */
+typedef struct hash_node_s
+{
+     char *key;
+     char *value;
+     struct hash_node_s *next;
+} hash_node_t;
 
+/**
+ * struct hash_table_s - Hash table data structure
+ *
+ * @size: The size of the array
+ * @array: An array of size @size
+ * Each cell of this array is a pointer to the first node of a linked list,
+ * because we want our HashTable to use a Chaining collision handling
+ */
+typedef struct hash_table_s
+{
+     unsigned long int size;
+     hash_node_t **array;
+} hash_table_t;
 ```
 ## Resources
 - [doc.python.org] (https://docs.python.org/3/tutorial)
