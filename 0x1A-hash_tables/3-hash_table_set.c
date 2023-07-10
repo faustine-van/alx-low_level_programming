@@ -10,11 +10,12 @@
 
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	unsigned int index = key_index((const unsigned char *)key, ht->size);
+	unsigned int index;
 	hash_node_t *currentNode, *newNode;
 
 	if (!ht || !key || strcmp(key, "") == 0)/**key is not an empty **/
 		return (0);
+	index = key_index((const unsigned char *)key, ht->size);
 	currentNode = ht->array[index];
 	while (currentNode != NULL)
 	{
