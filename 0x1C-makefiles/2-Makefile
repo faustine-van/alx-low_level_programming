@@ -5,11 +5,12 @@ OBJ = $(SRC:.c=.o)
 NAME = school
 
 # default target
-all: $(OBJ)
+all: $(NAME)
 
 # Rule to create objec files
 %.o: %.c
 	$(CC) -c $< -o $@
 
 # Rule to create the final excutables
-$(NAME): $(OBJ) -0 $(NAME)
+$(NAME): $(OBJ)
+	$(CC) $(OBJ) -o $@
