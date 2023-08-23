@@ -10,8 +10,14 @@ CFLAGS = -Wall -Werror -Wextra -pedantic
 all: $(NAME)
 
 # Rule to create objects files using wildcard %
-%.o: %.c
+# %.o: %.c
+# 	$(CC) $(CFLAGS) -c $< -o $@
+
+main.o: main.o
 	$(CC) $(CFLAGS) -c $< -o $@
+school.o: school.o
+	$(CC) $(CFLAGS) $< -o $@
+
 
 # Rule specifies how to create the final executable ($(NAME))
 # from the object files listed in $(OBJ).
