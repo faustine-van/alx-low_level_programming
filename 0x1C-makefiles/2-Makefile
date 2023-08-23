@@ -4,5 +4,12 @@ SRC = main.c school.c
 OBJ = $(SRC:.c=.o)
 NAME = school
 
+# default target
 all: $(OBJ)
-	$(CC) $(SRC) -o $(NAME)
+
+# Rule to create objec files
+%.o: %.c
+	$(CC) -c $< -o $@
+
+# Rule to create the final excutables
+$(NAME): $(OBJ) -0 $(NAME)
