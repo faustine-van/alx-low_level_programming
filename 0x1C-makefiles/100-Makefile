@@ -3,26 +3,21 @@ CC = gcc
 SRC = main.c  school.c
 OBJ = $(SRC:.c=.o)
 NAME = school
-RM = rm -f
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
 # default target
 all: $(NAME)
 
+FLAGS = -Wall -Werror -Wextra -pedantic
 # Rule to create objects files using wildcard %
-# %.o: %.c
-# 	$(CC) $(CFLAGS) -c $< -o $@
-
-main.o: main.o
-	$(CC) $(CFLAGS) -c $< -o $@
-school.o: school.o
-	$(CC) $(CFLAGS) $< -o $@
+%.o: %.c
+	$(CC) $(FLAGS) -c $< -o $@
 
 
 # Rule specifies how to create the final executable ($(NAME))
 # from the object files listed in $(OBJ).
 $(NAME): $(OBJ)
-	$(CC) $(CFLAGS) $(OBJ) -o $@
+	$(CC) $(FLAGS) $(OBJ) -o $@
 
 # deletes all Emacs and Vim temporary files along with the executable
 clean:
