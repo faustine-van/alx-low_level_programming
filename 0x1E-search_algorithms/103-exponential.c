@@ -28,9 +28,6 @@ int binary_rec(int *a, size_t left, size_t right, int val)
 {
 	size_t i, midval;
 
-	if (left > right)
-		return (-1);
-
 	if (left <= right)
 	{
 		/* print the array being searched every time it changes */
@@ -73,8 +70,6 @@ int exponential_search(int *array, size_t size, int value)
 
 	if (array[0] == value)
 		return (0);
-	if (array == NULL)
-		return (-1);
 	while (a < size && array[a] <= value)
 	{
 		printf("Value checked array[%ld] = [%d]\n", a, array[a]);
