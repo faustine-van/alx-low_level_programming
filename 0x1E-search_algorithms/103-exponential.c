@@ -28,6 +28,9 @@ int binary_rec(int *a, size_t left, size_t right, int val)
 {
 	size_t i, midval;
 
+	if (left > right)
+		return (-1);
+
 	if (left <= right)
 	{
 		/* print the array being searched every time it changes */
